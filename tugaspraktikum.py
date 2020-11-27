@@ -1,7 +1,7 @@
 data = {}
 while True:
     print("")
-    x = input("(L)ihat, (T)ambah, (U)bah, (H)apus,(C)ari, (K)eluar: ")
+    x = input("(L)ihat, (T)ambah, (U)bah, (H)apus, (C)ari, (K)eluar: ")
     if x.lower() == "l":
         if data.items():
             print("================================== Daftar Nilai ======================================")
@@ -27,7 +27,7 @@ while True:
         tugas = int(input("NIlai Tugas\t: "))
         uts = int(input("Nilai UTS\t: "))
         uas = int(input("Nilai UAS\t: "))
-        nilaiakhir = ((tugas) * 30 / 100 + (uts) * 35 / 100 + (uas) * 35 / 100)
+        nilaiakhir = ((tugas) * 0.3 + (uts) * 0.35 + (uas) * 0.35)
         data[nama] = nim, tugas, uts, uas, nilaiakhir
     elif x.lower() == "u":
         print("===============================")
@@ -47,7 +47,7 @@ while True:
             print("=====BERHASIL MENGUBAH DATA=====")
             print("================================")
         else:
-            print("Data nilai{0} tidak ada ".format(nama))
+            print("Data nilai {0} tidak ada ".format(nama))
     elif x.lower() == "h":
         print("Hapus Data Nilai Mahasiswa")
         nama = input(" Masukan Nama\t:")
@@ -72,6 +72,7 @@ while True:
         else:
             print("Datanya {0} tidak ada ".format(nama))
     elif x.lower() == "k":
+        print()
         print("=================================")
         print("====== KELUAR DARI PROGRAM ======")
         print("=================================")

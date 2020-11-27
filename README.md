@@ -53,7 +53,7 @@ while True:
             print("======================================================================================")
             print("|  No  |      Nama     |      NIM      |   TUGAS  |   UTS   |   UAS   | Nilai Akhir  |")
             print("======================================================================================")
-            print("|                                 Tidak Ada Daftar Nilai                             |")
+            print("|                                    Tidak Ada Data                                  |")
         print("======================================================================================")
     elif x.lower() == "t":
         print("Tambah Data")
@@ -90,7 +90,7 @@ while True:
             del data[nama]
             print()
             print("================================")
-            print("====BERHASIL MENGHHAPUS DATA====")
+            print("====BERHASIL MENGHAPUS DATA====")
             print("================================")
         else:
             print("Data {0} tidak ada".format(nama))
@@ -107,20 +107,60 @@ while True:
         else:
             print("Datanya {0} tidak ada ".format(nama))
     elif x.lower() == "k":
-        print("Keluar dari program")
+        print("=================================")
+        print("====== KELUAR DARI PROGRAM ======")
+        print("=================================")
         break
 
     else:
-        print("============================ Daftar Nilai ============================================")
-        print("======================================================================================")
-        print("|  No  |      Nama     |      NIM      |   TUGAS  |   UTS   |   UAS   | Nilai Akhir  |")
-        print("======================================================================================")
-        print("|                               Tidak Ada Daftar Nilai                               |")
-        print("======================================================================================")
-else:
-    print("Pilih Menu Yang Tersedia")
+        print("Pilih Menu Yang Tersedia")
 ```
 
 Penjelasan :
 
+Program ini dibuat dengan ***Dictionary***, dengan pilihan melihat, menambahkan, mengubah, menghapus, mencari & keluar dari program.
+
+* Membuat menu pilihan<br>
+    Untuk membuat pilihan saya menggunakan perulangan **while true** 
+    ```python
+    data = {}
+    while True:
+        print("")
+        x = input("(L)ihat, (T)ambah, (U)bah, (H)apus,(C)ari, (K)eluar: ")
+    ``` 
+  * **data = {}**, membuat dictionary kosong<br>
+  * **x = input**, untuk menampilkan opsi pilihan<br>
+  
+* Melihat data
+    Karena menggunakan perulangan **while true**, dan ada banyak pilihan, maka disini menggunakan **if, elif & else**<br>
+    Setelah muncul menu, maka bila kita masukkan menu **l** atau Lihat
+    agar bisa memunculkan tabel, maka berikut source codenya
+    ```python
+    if x.lower() == "l":
+        if data.items():
+            print("================================== Daftar Nilai ======================================")
+            print("======================================================================================")
+            print("|  No  |      NIM      |      NAMA         |    TUGAS   |   UTS   |   UAS   | AKHIR  |")
+            print("======================================================================================")
+            i = 0
+            for x in data.items():
+                i += 1
+                print("| {6:4} | {0:13s} | {1:17} | {2:10d} |  {3:6d} | {3:7d} | {5:6.2f} | " \
+                      .format(x[0], x[1][0], x[1][1], x[1][2], x[1][3], x[1][4], i))
+        else:
+            print("===================================== Daftar Nilai ===================================")
+            print("======================================================================================")
+            print("|  No  |      Nama     |      NIM      |   TUGAS  |   UTS   |   UAS   | Nilai Akhir  |")
+            print("======================================================================================")
+            print("|                                    Tidak Ada Data                                  |")
+        print("======================================================================================")
+    ```
+  * **x.lower()**, berfungsi apabila kita memasukkan huruf L besar(kapital) maka akan otomatis terbaca menjadi huruf kecil, jadi agar tidak ada error apalabila kita memasukkan huruf besar maupun kecil, maka bila ditambahkan menjadi **if x.lower() == "l":** dia akan menampilkan list <br>
+  * Di pilihan **"l"** ada 2 output, yaitu output dengan data dan output tanpa data, bila kita belum memasukkan data apapun dan kita memilih menu **lihat** atau **"l"** maka outputnya akan seperti berikut <br>
+  ![outoutl1](Pic/outputpraktikuml.png) <br>
+  tapi bila sudah ada data maka data akan ditampilkan seperti ini<br>
+  ![outputl2](Pic/outputpraktikuml1.png)
+  * Karena ada 2 output dalam pilihan **"l"** maka menggunakan **"if"** & **"else"**
+  * **print("| {6:4} | {0:13s} | {1:17} | {2:10d} |  {3:6d} | {3:7d} | {5:6.2f} | "**, berfungsi untuk membuat spasi atau jarak lalu di ikuti dengan **.format(x[0], x[1][0], x[1][1], x[1][2], x[1][3], x[1][4], i))**, untuk menampilkan data yang telah di input<br>
+  
 * 

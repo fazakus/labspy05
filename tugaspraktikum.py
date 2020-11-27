@@ -55,7 +55,7 @@ while True:
             del data[nama]
             print()
             print("================================")
-            print("====BERHASIL MENGHHAPUS DATA====")
+            print("====BERHASIL MENGHAPUS DATA====")
             print("================================")
         else:
             print("Data {0} tidak ada".format(nama))
@@ -72,7 +72,9 @@ while True:
         else:
             print("Datanya {0} tidak ada ".format(nama))
     elif x.lower() == "k":
-        print("Keluar dari program")
+        print("=================================")
+        print("====== KELUAR DARI PROGRAM ======")
+        print("=================================")
         break
 
     else:

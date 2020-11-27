@@ -64,7 +64,7 @@ while True:
         tugas = int(input("NIlai Tugas\t: "))
         uts = int(input("Nilai UTS\t: "))
         uas = int(input("Nilai UAS\t: "))
-        nilaiakhir = ((tugas) * 30 / 100 + (uts) * 35 / 100 + (uas) * 35 / 100)
+        nilaiakhir = ((tugas) * 0.3 + (uts) * 0.35 + (uas) * 0.35)
         data[nama] = nim, tugas, uts, uas, nilaiakhir
     elif x.lower() == "u":
         print("===============================")
@@ -84,7 +84,7 @@ while True:
             print("=====BERHASIL MENGUBAH DATA=====")
             print("================================")
         else:
-            print("Data nilai{0} tidak ada ".format(nama))
+            print("Data nilai {0} tidak ada ".format(nama))
     elif x.lower() == "h":
         print("Hapus Data Nilai Mahasiswa")
         nama = input(" Masukan Nama\t:")
@@ -109,6 +109,7 @@ while True:
         else:
             print("Datanya {0} tidak ada ".format(nama))
     elif x.lower() == "k":
+        print()
         print("=================================")
         print("====== KELUAR DARI PROGRAM ======")
         print("=================================")
@@ -118,11 +119,11 @@ while True:
         print("Pilih Menu Yang Tersedia")
 ```
 
-Penjelasan :
+**Penjelasan :**
 
 Program ini dibuat dengan ***Dictionary***, dengan pilihan melihat, menambahkan, mengubah, menghapus, mencari & keluar dari program.
 
-* Membuat menu pilihan<br>
+* **Membuat menu pilihan**<br>
     Untuk membuat pilihan saya menggunakan perulangan **while true** 
     ```python
     data = {}
@@ -133,7 +134,7 @@ Program ini dibuat dengan ***Dictionary***, dengan pilihan melihat, menambahkan,
   * **data = {}**, membuat dictionary kosong<br>
   * **x = input**, untuk menampilkan opsi pilihan<br>
   
-* Melihat data<br>
+* **Melihat data**<br>
     Karena menggunakan perulangan **while true**, dan ada banyak pilihan, maka disini menggunakan **if, elif & else**<br>
     Setelah muncul menu, maka bila kita masukkan menu **l** atau Lihat
     agar bisa memunculkan tabel, maka berikut source codenya
@@ -165,7 +166,7 @@ Program ini dibuat dengan ***Dictionary***, dengan pilihan melihat, menambahkan,
   * Karena ada 2 output dalam pilihan **"l"** maka menggunakan **"if"** & **"else"**
   * **print("| {6:4} | {0:13s} | {1:17} | {2:10d} |  {3:6d} | {3:7d} | {5:6.2f} | "**, berfungsi untuk membuat spasi atau jarak lalu di ikuti dengan **.format(x[0], x[1][0], x[1][1], x[1][2], x[1][3], x[1][4], i))**, untuk menampilkan data yang telah di input<br>
   
-* Menambah Data<br>
+* **Menambah Data**<br>
     Untuk pilihan menambah data maka berikut adalah source codenya
     ```python
         elif x.lower() == "t":
@@ -184,7 +185,7 @@ Program ini dibuat dengan ***Dictionary***, dengan pilihan melihat, menambahkan,
  * Untuk output programnya seperti berikut, saya mencoba memasukkan 2 data<br>
  ![outputt](Pic/outputpraktikumt1.png)<br>
   
-* Mengubah Data 
+* **Mengubah Data**
     Pada pilihan ketiga yaitu mengubah data, disini saya akan membuat program ini bisa merubah data NIM dan nilai - nilai yang sudah di inputkan, berikut source codenya
      ```python
         elif x.lower() == "u":
@@ -214,7 +215,7 @@ Program ini dibuat dengan ***Dictionary***, dengan pilihan melihat, menambahkan,
   * **print("Data nilai {0} tidak ada ".format(nama))**, berfungsi untuk apabila salah memasukkan nama yang tidak ada pada data maka akan keluar output<br>
   ![output3](Pic/outputpraktikumu3.png)<br>
   
-* Menghapus Data
+* **Menghapus Data**
     Untuk menghapus data, maka berikut adalah source codenya
     ```python
         elif x.lower() == "h":
@@ -236,7 +237,7 @@ Program ini dibuat dengan ***Dictionary***, dengan pilihan melihat, menambahkan,
   * Bila kita lihat lagi pada tabel, maka data sudah terhapus<br>
   ![output3](Pic/outputpraktikumh2.png)<br>.
   
-* Mencari Data
+* **Mencari Data**
     Untuk mencari data, berikut source codenya 
     ```python
         elif x.lower() == "c":
@@ -257,7 +258,7 @@ Program ini dibuat dengan ***Dictionary***, dengan pilihan melihat, menambahkan,
   * **print("Datanya {0} tidak ada ".format(nama))**, berfungsi untuk apabila salah memasukkan nama yang tidak ada pada data maka akan keluar output seperti berikut<br>
   ![output2](Pic/outputpraktikumc1.png)<br>
 
-* Keluar dari Program
+* **Keluar dari Program**
     Untuk keluar dari program, maka tambahka break pada pilihan keluar dari program
     ```python
         elif x.lower() == "k":
@@ -269,7 +270,7 @@ Program ini dibuat dengan ***Dictionary***, dengan pilihan melihat, menambahkan,
     ```
   ![outputk](Pic/outputpraktikumk.png)
   
-* Kesalahan memasukkan pilihan<br>
+* **Kesalahan memasukkan pilihan**<br>
     Apabila salah dalam memasukkan pilihan maka akan balik lagi untuk memilih pilihan yang tersedia, agar program seperti itu maka cukup dengan **else**, berikut syntaxnya
     ```python
         else:
@@ -280,8 +281,8 @@ Program ini dibuat dengan ***Dictionary***, dengan pilihan melihat, menambahkan,
 Sekian untuk Tugas 5<br>
 
 **================================================================**<br>
-**=========================FAZA ARDAN KUSUMA=======================**<br>
-**=============================312010001===========================**<br>
-**==============================TA.20.B1===========================**<br>
-**============================TERIMA KASIH=========================**<br>
+**=========================FAZA ARDAN KUSUMA========================**<br>
+**=============================312010001=============================**<br>
+**==============================TA.20.B1=============================**<br>
+**============================TERIMA KASIH==========================**<br>
 **================================================================**

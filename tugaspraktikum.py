@@ -11,8 +11,7 @@ while True:
             i = 0
             for x in data.items():
                 i += 1
-                print("| {6:4} | {0:13s} | {1:17} | {2:10d} |  {3:6d} | {3:7d} | {5:6.2f} | " \
-                      .format(x[0], x[1][0], x[1][1], x[1][2], x[1][3], x[1][4], i))
+                print(f"| {i:4} | {x[0]:13s} | {x[1][0]:17} | {x[1][1]:10d} |  {x[1][2]:6d} | {x[1][2]:7d} | {x[1][4]:6.2f} | ")
         else:
             print("===================================== Daftar Nilai ===================================")
             print("======================================================================================")
@@ -27,7 +26,7 @@ while True:
         tugas = int(input("NIlai Tugas\t: "))
         uts = int(input("Nilai UTS\t: "))
         uas = int(input("Nilai UAS\t: "))
-        nilaiakhir = ((tugas) * 0.3 + (uts) * 0.35 + (uas) * 0.35)
+        nilaiakhir = (tugas * 0.3 + uts * 0.35 + uas * 0.35)
         data[nama] = nim, tugas, uts, uas, nilaiakhir
     elif x.lower() == "u":
         print("===============================")

@@ -21,10 +21,11 @@ Untuk source codenya <br>
 
 Untuk tugas praktikum 5 ini, tugasnya membuat program daftar nilai mahasiswa sederhana yang bisa ditambah, dihapus, diubah, dilihat dan dimasukkan kedalam tabel, & keluar dari program tersebut
 
-Berikut untuk flowcartnya <br>
-
 Tugas 5<br>
 ![tugas5](Pic/tugaspraktikum.png)<br>
+
+Berikut untuk flowcartnya<br>
+![fc](Pic/flowchart-labspy05wm.png)<br>
 
 Output pada tugas :<br>
     *  Jika sebelum kita memasukkan data mahasiswa, bila kita ingin melihat tabel maka outputnya seperti ini

@@ -28,11 +28,11 @@ Berikut untuk flowcartnya<br>
 ![fc](Pic/flowchart-labspy05wm.png)<br>
 
 Output pada tugas :<br>
-    *  Jika sebelum kita memasukkan data mahasiswa, bila kita ingin melihat tabel maka outputnya seperti ini
+* Jika sebelum kita memasukkan data mahasiswa, bila kita ingin melihat tabel maka outputnya seperti ini
   ![outputtugas](Pic/output1.png)<br>
      
-* ![outputtugas2](Pic/output2.png)<br>
-   Untuk output selanjutnya menggunakan tabel
+*  Untuk output selanjutnya menggunakan tabel<br>
+![outputtugas2](Pic/output2.png)<br>
 
 Untuk source code nya
 ```python
